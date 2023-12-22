@@ -2,22 +2,30 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  const valueA = 2;
-  const valueB = 3;
   return (
     <div>
-      <Sum valueA={valueA} valueB={valueB} />
+      <Sum valueA={8} valueB={3} />
+      <Sub valueA={10} valueB={2} />
     </div>
   );
 }
 
 function Sum({ valueA, valueB }) {
+  return (
+    <>
+      <p>{valueA + valueB}</p>
+    </>
+  );
+}
+
+//hier werden valueA und valueB zusätzlich im Browser ausgegeben
+function Sub({ valueA, valueB }) {
   const sum = valueA + valueB;
   return (
-    <div>
+    <>
       <p>
-        {valueA}+{valueB}={sum}
+        {valueA}-{valueB}={sum}
       </p>
-    </div>
+    </>
   );
 }
